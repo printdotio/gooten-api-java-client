@@ -4,16 +4,13 @@ import gooten.api.client.ApiClient;
 
 import gooten.api.model.Result;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import feign.*;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T14:18:01.102+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T15:29:28.016Z")
 public interface AddressvalidationApi extends ApiClient.Api {
 
 
@@ -35,5 +32,4 @@ public interface AddressvalidationApi extends ApiClient.Api {
   })
   Result addressvalidation(@Param("line1") String line1, @Param("line2") String line2, @Param("city") String city, @Param("state") String state, @Param("postalCode") String postalCode, @Param("countryCode") String countryCode);
   
-
 }

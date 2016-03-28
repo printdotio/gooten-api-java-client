@@ -12,9 +12,7 @@ import java.util.List;
 
 
 
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T14:18:01.102+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T15:29:28.016Z")
 public class ShippingPricesResult   {
   
   private List<ShipItem> result = new ArrayList<ShipItem>();
@@ -76,6 +74,4 @@ public class ShippingPricesResult   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

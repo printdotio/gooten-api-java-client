@@ -4,16 +4,13 @@ import gooten.api.client.ApiClient;
 
 import gooten.api.model.OrderStatusUpdateResult;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import feign.*;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T14:18:01.102+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T15:29:28.016Z")
 public interface OrderstatusApi extends ApiClient.Api {
 
 
@@ -32,5 +29,4 @@ public interface OrderstatusApi extends ApiClient.Api {
   })
   OrderStatusUpdateResult pOSTOrderstatus(@Param("partnerBillingKey") String partnerBillingKey, @Param("id") String id, @Param("orderStatusName") String orderStatusName);
   
-
 }

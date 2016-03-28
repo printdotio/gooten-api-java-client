@@ -10,9 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T14:18:01.102+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T15:29:28.016Z")
 public class ShipOption   {
   
   private Long id = null;
@@ -235,6 +233,4 @@ public class ShipOption   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

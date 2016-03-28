@@ -6,16 +6,13 @@ import gooten.api.model.PostSubmittedOrder;
 import gooten.api.model.OrderResult;
 import gooten.api.model.PostOrder;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import feign.*;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T14:18:01.102+03:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T15:29:28.016Z")
 public interface OrdersApi extends ApiClient.Api {
 
 
@@ -50,5 +47,4 @@ public interface OrdersApi extends ApiClient.Api {
   })
   OrderResult pOSTOrders(PostOrder order, @Param("version") Integer version, @Param("source") String source);
   
-
 }
