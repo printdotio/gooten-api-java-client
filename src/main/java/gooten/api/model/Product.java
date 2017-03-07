@@ -24,6 +24,8 @@ public class Product   {
   private String shortDescription = null;
   private Boolean hasAvailableProductVariants = null;
   private Boolean hasProductTemplates = null;
+  private Boolean featured = null;
+  private Boolean comingSoon = null;
   private Long featuredIndex = null;
   private Long maxZoom = null;
   private ProductPriceInfo retailPrice = null;
@@ -121,6 +123,23 @@ public class Product   {
     this.hasAvailableProductVariants = hasAvailableProductVariants;
   }
 
+  @ApiModelProperty(example = "null", required = true, value = "Whether or not the item returned is featured")
+  @JsonProperty("IsFeatured")
+  public Boolean getFeatured() {
+    return featured;
+  }
+  public void setFeatured(Boolean featured) {
+    this.featured = featured;
+  }
+
+  @ApiModelProperty(example = "null", required = true, value = "Whether or not the item returned is coming soon")
+  @JsonProperty("IsComingSoon")
+  public Boolean getComingSoon() {
+    return comingSoon;
+  }
+  public void setComingSoon(Boolean comingSoon) {
+    this.comingSoon = comingSoon;
+  }
   
   /**
    * Whether or not the product has variants with templates.
@@ -219,7 +238,7 @@ public class Product   {
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Product images. Note that this contains large and small images for web, mobile, etc")
-  @JsonProperty("ProductImage")
+  @JsonProperty("Images")
   public List<ProductImage> getProductImage() {
     return productImage;
   }
