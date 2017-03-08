@@ -1,22 +1,22 @@
 package gooten.api.client;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
-
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-
 import feign.Feign;
 import feign.RequestInterceptor;
 import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
 import feign.slf4j.Slf4jLogger;
-import gooten.api.client.auth.*;
+import gooten.api.client.auth.ApiKeyAuth;
+import gooten.api.client.auth.HttpBasicAuth;
+import gooten.api.client.auth.OAuth;
 import gooten.api.client.auth.OAuth.AccessTokenListener;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-28T15:29:28.016Z")
 public class ApiClient {
@@ -38,7 +38,7 @@ public class ApiClient {
 
   public ApiClient(String[] authNames) {
     this();
-    for(String authName : authNames) { 
+    for(String authName : authNames) {
       throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
     }
   }
@@ -119,6 +119,7 @@ public class ApiClient {
     ObjectMapper objectMapper = new ObjectMapper();
     objectMapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     objectMapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
+    objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
     return objectMapper;
   }
 
